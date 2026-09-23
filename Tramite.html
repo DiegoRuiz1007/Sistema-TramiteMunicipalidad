@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa de Partes Virtual - Municipalidad Provincial de Trujillo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabecera Institucional -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>🏛️ Municipalidad Provincial de Trujillo</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#" class="active">Nuevo Trámite</a></li>
+                    <li><a href="#">Consultar Estado</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Área principal -->
+    <main class="container main-content">
+        <section class="form-section">
+            <div class="section-title">
+                <h2>Registro de Nuevo Trámite</h2>
+                <p>Complete el siguiente formulario para ingresar su solicitud a la Mesa de Partes Virtual. Todos los campos con asterisco (*) son obligatorios.</p>
+            </div>
+
+            <form action="#" method="POST" class="tramite-form">
+                
+                <!-- Sección 1: Datos del Trámite -->
+                <fieldset>
+                    <legend>1. Información del Trámite</legend>
+                    <div class="form-group full-width">
+                        <label for="tipo-tramite">Tipo de Trámite *</label>
+                        <select id="tipo-tramite" name="tipo-tramite" required>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="licencia">Licencia de Funcionamiento</option>
+                            <option value="construccion">Permiso de Construcción</option>
+                            <option value="tributos">Declaración de Tributos / Arbitrios</option>
+                            <option value="sugerencias">Quejas y Sugerencias</option>
+                            <option value="otros">Otros Trámites Administrativos</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 2: Datos del Solicitante -->
+                <fieldset>
+                    <legend>2. Datos del Solicitante</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tipo-doc">Tipo de Documento *</label>
+                            <select id="tipo-doc" name="tipo-doc" required>
+                                <option value="DNI">DNI</option>
+                                <option value="CE">Carné de Extranjería</option>
+                                <option value="RUC">RUC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="num-doc">Número de Documento *</label>
+                            <input type="text" id="num-doc" name="num-doc" placeholder="Ej. 12345678" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="nombres">Nombres y Apellidos / Razón Social *</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres completos" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 987654321" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico *</label>
+                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="direccion">Dirección Actual *</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Av. / Calle / Jr. - Distrito" required>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 3: Detalle de la solicitud -->
+                <fieldset>
+                    <legend>3. Detalle de la Solicitud</legend>
+                    <div class="form-group full-width">
+                        <label for="asunto">Asunto *</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Breve descripción de su solicitud" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="descripcion">Sustento / Descripción *</label>
+                        <textarea id="descripcion" name="descripcion" rows="5" placeholder="Detalle aquí su solicitud..." required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="archivo">Adjuntar Documentos (PDF, máx. 10MB)</label>
+                        <input type="file" id="archivo" name="archivo" accept=".pdf">
+                        <small class="help-text">Puede subir un único archivo PDF con todos los anexos necesarios.</small>
+                    </div>
+                </fieldset>
+
+                <!-- Términos y Botón -->
+                <div class="form-actions">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="declaracion" name="declaracion" required>
+                        <label for="declaracion">Declaro bajo juramento que la información y documentos proporcionados son verdaderos.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>Municipalidad Provincial de Trujillo</h4>
+                <p>Sede Central: Jr. Diego de Almagro 525, Trujillo - La Libertad</p>
+                <p>Horario de atención virtual: Lunes a Viernes de 08:00 a.m. a 04:30 p.m.</p>
+            </div>
+            <div class="footer-links">
+                <p>Mesa de Partes Virtual v1.0</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
